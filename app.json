@@ -3,7 +3,7 @@
     "android": {
       "adaptiveIcon": {
         "backgroundColor": "#ffffff",
-        "foregroundImage": "./assets/adaptive-icon.png"
+        "foregroundImage": "./assets/icon.png"
       }
     },
     "assetBundlePatterns": [
@@ -11,8 +11,8 @@
     ],
     "icon": "./assets/icon.png",
     "ios": {
-      "supportsTablet": true,
-      "bundleIdentifier": "com.mizumura.instagpt"
+      "bundleIdentifier": "com.mizumura.instagpt",
+      "supportsTablet": true
     },
     "name": "insta-gpt",
     "orientation": "portrait",
@@ -35,7 +35,7 @@
     "userInterfaceStyle": "light",
     "version": "1.0.0",
     "web": {
-      "favicon": "./assets/favicon.png"
+      "favicon": "./assets/icon.png"
     }
   }
 }
