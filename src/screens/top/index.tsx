@@ -2,12 +2,14 @@ import { useEffect, useState } from 'react'
 import { Text, View } from 'react-native'
 import { s } from 'react-native-wind'
 
+import { Image } from 'expo-image'
 import * as ImagePicker from 'expo-image-picker'
 import { useRouter } from 'expo-router'
 import useSWR from 'swr'
 
 import Button from '@/components/button'
 import { InputWithLabel } from '@/components/input'
+import ExKeyboardAvoidingView from '@/components/keyboardAvoidingView'
 import { SWR_KEY } from '@/constants'
 import { getStorageData, setStorageData } from '@/utils/async-storage'
 
@@ -41,17 +43,26 @@ const TopScreen = () => {
   }, [])
 
   return (
-    <View style={s`h-full flex items-center justify-center bg-midnight px-container`}>
-      <View>
-        <Text style={s`text-2xl text-white pb-4`}>{'It\'s Insta GPT'}</Text>
-        <InputWithLabel
-          label="GPT API KEY"
-          value={apiKey || ''}
-          onChangeText={setApiKey}
-        />
-        <Button onPress={pickImage}>Select Image</Button>
+    <ExKeyboardAvoidingView>
+      <View style={s`h-full flex items-center justify-center bg-midnight px-container`}>
+        <View>
+          <View style={s`flex-col items-center`}>
+            <Text style={s`text-2xl text-white pb-4`}>{'It\'s INSTA GPT'}</Text>
+            <Text style={s`text-white pb-4`}>{'Innovative smartphone app that can create Instagram posts automatically through ChatGPT!'}</Text>
+            <Image
+              source={require('@assets/icon.png')}
+              style={s`w-56 h-56 mb-4`}
+            />
+          </View>
+          <InputWithLabel
+            label="YOUR API KEY"
+            value={apiKey || ''}
+            onChangeText={setApiKey}
+          />
+          <Button onPress={pickImage}>Select Image</Button>
+        </View>
       </View>
-    </View>
+    </ExKeyboardAvoidingView>
   )
 }
 

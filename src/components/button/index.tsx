@@ -9,7 +9,7 @@ type Props = TouchableOpacityProps & {
 const Button = ({ children, ...props }: Props) => {
   return (
     <TouchableOpacity
-      style={s`bg-primary px-4 py-2 rounded-lg`}
+      style={s`bg-primary px-4 py-2 rounded-lg flex-row items-center justify-center`}
       {...props}
     >
       <Text style={s`text-lg text-midnight font-semibold`}>{children}</Text>
