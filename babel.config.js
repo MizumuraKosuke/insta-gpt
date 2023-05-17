@@ -19,7 +19,10 @@ module.exports = function(api) {
     require.resolve('expo-router/babel'),
   ]
   if (babelEnv === 'production') {
-    plugins.push([ 'transform-remove-console', { exclude: [ 'error', 'warn' ]}])
+    plugins.push([
+      'transform-remove-console', { exclude: [ 'error', 'warn' ]},
+      'react-native-reanimated/plugin',
+    ])
   }
   return {
     presets: [ 'babel-preset-expo' ],

@@ -7,6 +7,7 @@ customize({
       secondary: '#8CC63F',
       black: '#1c1c1c',
       gray: '#F5F5F5',
+      bordergray: '#444',
       white: '#dedede',
       midnight: '#101014',
     },

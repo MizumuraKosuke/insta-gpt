@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { memo } from 'react'
 import { Platform } from 'react-native'
 import { Gesture, GestureDetector  } from 'react-native-gesture-handler'
 import Animated, { useAnimatedStyle, useSharedValue } from 'react-native-reanimated'
@@ -53,4 +53,4 @@ const Pinch = ({ children }: Props) => {
   )
 }
 
-export default Pinch
+export default memo(Pinch)

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { memo, useEffect, useState } from 'react'
 import {
   Platform,
   KeyboardAvoidingView,
@@ -36,4 +36,4 @@ const ExKeyboardAvoidingView = ({ children, ...props }: Props) => {
   )
 }
 
-export default ExKeyboardAvoidingView
+export default memo(ExKeyboardAvoidingView)
