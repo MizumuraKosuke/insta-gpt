@@ -4,14 +4,17 @@
       "adaptiveIcon": {
         "backgroundColor": "#ffffff",
         "foregroundImage": "./assets/icon.png"
-      }
+      },
+      "permissions": [
+        "android.permission.RECORD_AUDIO"
+      ]
     },
     "assetBundlePatterns": [
       "**/*"
     ],
     "icon": "./assets/icon.png",
     "ios": {
-      "buildNumber": "2",
+      "buildNumber": "3",
       "bundleIdentifier": "com.mizumura.instagpt",
       "supportsTablet": true
     },
@@ -37,6 +40,11 @@
     "version": "1.0.0",
     "web": {
       "favicon": "./assets/icon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "7c4984b7-4c13-4668-a27e-1e7c602ad88f"
+      }
     }
   }
 }
