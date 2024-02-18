@@ -7,7 +7,8 @@
       },
       "permissions": [
         "android.permission.RECORD_AUDIO"
-      ]
+      ],
+      "package": "com.mizumura.instagpt"
     },
     "assetBundlePatterns": [
       "**/*"
@@ -45,6 +46,7 @@
     "version": "1.0.0",
     "web": {
       "favicon": "./assets/icon.png"
-    }
+    },
+    "owner": "mizumura"
   }
 }
